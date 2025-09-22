@@ -383,6 +383,8 @@ def run(args: argparse.Namespace):
         lr.fit(X_tr_last, Y_tr)
         proba_lr = lr.predict_proba(X_te_last)
 
+        print(f'proba_lr {proba_lr}')
+
         # NN
         model = build_cnn(input_shape=(args.window, X_tr.shape[-1]), n_classes=n_classes)
         best_path = os.path.join(args.outdir, f"best_fold{fold}.keras")
