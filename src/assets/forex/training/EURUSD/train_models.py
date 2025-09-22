@@ -157,7 +157,7 @@ def random_forest_classifier(df, asset):
     
     probas = clf.predict_proba(X_test)
 
-    encoder = OneHotEncoder(sparse=False)
+    encoder = OneHotEncoder()
 
     
 
